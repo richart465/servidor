@@ -1,0 +1,14 @@
+button.search-btn.btn.btn-default {
+    border: 1px solid #dee2e6;
+    border-left: 0;
+    border-radius: 0;
+    border-top-right-radius: 0.375rem;
+    border-bottom-right-radius: 0.375rem;
+}
+input.search-input.form-control{
+    border-right: 0;
+}
+input.search-input.form-control:focus {
+    box-shadow: none;
+    border-color: #dee2e6;
+}

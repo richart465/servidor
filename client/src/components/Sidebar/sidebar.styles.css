@@ -1,0 +1,44 @@
+.sidebar{
+    background: #212121;
+    height: 100vh;
+    width: 200px;
+    color: white;
+}
+.sidebar__menu ul, .sidebar__bottom__menu ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar__menu ul li a, .sidebar__bottom__menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 1rem;
+    display: block;
+    padding: 15px 15px;
+}
+
+.sidebar__menu ul li a:hover {
+    background: #2f2f2f;
+}
+.sidebar__bottom__menu ul li a:hover {
+    background: #2f2f2f;
+}
+.sidebar__bottom__menu{
+    position: absolute;
+    bottom: 0;
+    width: 200px;
+}
+
+@media screen and (min-width: 1980px) {
+    .sidebar {
+        width: 250px;
+    }
+    .sidebar__bottom__menu{
+        width: 250px;
+    }
+    .sidebar__menu ul li a, .sidebar__bottom__menu ul li a {
+        font-size: 1.2rem;
+        padding: 20px 15px;
+    }
+}

@@ -1,0 +1,26 @@
+version: "3"
+
+services:
+  database-mongo:
+    image: mongo:5.0.2
+    container_name: database-mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./data:/data/db
+
+  gorda-api:
+    # this service uses as image fastapi/uvicorn-gunicorn:python3.8
+    container_name: gorda-api
+    build: .
+    working_dir: /gorda
+    # install dependencies and run the app
+    command: uvicorn api.v1.app:app --host 0.0.0.0 --port 5555 --reload --env-file .env
+    volumes:
+      - .:/gorda
+    ports:
+      - "5555:5555"
+    restart: on-failure
+    depends_on:
+      - database-mongo

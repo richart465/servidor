@@ -1,0 +1,18 @@
+.form__container{
+    width: 600px;
+    margin: auto;
+    padding: 3rem;
+    background-color: white;
+    border-radius: 12px;
+}
+.auth__layout{
+    height: 100vh;
+    width: 100%;
+    background-color: #212121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img.rounded-img{
+    border-radius: 50%;
+}
